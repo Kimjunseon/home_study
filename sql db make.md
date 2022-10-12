@@ -8,8 +8,8 @@
     - 방법
         1. create database {database_name};   <- 데이터베이스 생성
         2. create user '{user_name}'@'localhost' identified by '{user_password}'; <- DB 사용자 생성   
-        3. grant all privileges on {user_name}.* to '{user_name}'@'localhost';    <- 권한부여, 안되면 밑에껄로 수정
-           grant all privileges on *.* to '{user_name}'@'localhost';   
+        3. grant all privileges on {user_name}.* to '{user_name}'@'localhost';    <- 권한부여, 안되면 밑에껄로 수정   
+           grant all privileges on *.* to '{user_name}'@'localhost';     
         4. flush privileges;   <- 권한 정보 재로딩
       
  ## B. PATH 설정
