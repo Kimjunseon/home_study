@@ -77,7 +77,7 @@ select floor(3.12);
 ```
  
  5. round(x): x에 근접한 정수
-    - round(x, d): x값 중에 소수점 d자리에 가장 근전합 실수
+    - round(x, d): x값 중에 소수점 d자리에 가장 근접한 실수
  ```
  select round(1.498);
  select round(1.498, 1);
