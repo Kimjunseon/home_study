@@ -1,17 +1,19 @@
 # group by 사용
+...
 selcet emp_no, AVG(salary)
    from salaries
-  이 값은 전체 연봉 평균에 사원 1명 값을 가져온다.. 다른 sql 구문에선 오류 발생
-------------------
-원하는 값은 각 사원 연봉 평균을 구하는 것으로 이때 사용되는 것이 Group by절
+...
+이 값은 전체 연봉 평균에 사원 1명 값을 가져온다.. 다른 sql 구문에선 오류 발생   
+원하는 값은 각 사원 연봉 평균을 구하는 것으로 이때 사용되는 것이 Group by절   
+...
 selcet emp_no, AVG(salary)
      from salaries
  group by emp_no
- ----------------------------------
+...
  
  # sql 함수
- avg(column) column의 평균
- sum(column) column의 합
+ - avg(column) column의 평균
+ - sum(column) column의 합
  
  # 날짜 함수
  오늘 날짜 확인
