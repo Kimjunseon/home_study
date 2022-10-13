@@ -10,25 +10,33 @@ selcet emp_no, AVG(salary)
      from salaries
  group by emp_no
 ```
- # 날짜 함수
+# 날짜 함수
  1. 오늘 날짜 확인
- - select curdate();
- - select current_date;
- 
+```
+ select curdate();
+ select current_date;
+```
+
  2. 현재 시간 확인
- - select curtime();
- - select current_time;
- 
+```
+ select curtime();
+ select current_time;
+```
+
  3. 현재 시간과 오늘 날짜 동시 확인
- - now()
- - sysdate()
- - select now(), sleep(2), now(); 쿼리가 시작 될때 시작 (슬립에 영향 없음)
- - select sysdate(), sleep(2), sysdate(); 쿼리가 실행 될때 시작 (슬립에 영향 받음)
+```
+ now()
+ sysdate()
+ select now(), sleep(2), now(); 쿼리가 시작 될때 시작 (슬립에 영향 없음)
+ select sysdate(), sleep(2), sysdate(); 쿼리가 실행 될때 시작 (슬립에 영향 받음)
+ ```
  
  4. 날짜 포맷
- - select date_format(now(), '%Y년 %m월 %d일 %h:%i:%s');
- - select date_format(now(), '%d %b, \'%y %h:%i:%s'); 미국식 시간 표기
- 
+```
+select date_format(now(), '%Y년 %m월 %d일 %h:%i:%s');
+select date_format(now(), '%d %b, \'%y %h:%i:%s'); 미국식 시간 표기
+```
+
  5. 날짜 기간 구하기 (개월 수)
  ```
   select emp_no,
@@ -36,6 +44,7 @@ selcet emp_no, AVG(salary)
 	    from employees
 	order by month desc;
   ```
+  
   6. 근속 년수 더하기
   ```
   select first_name,
@@ -48,33 +57,49 @@ selcet emp_no, AVG(salary)
  - sum(column) column의 합 
   
  1. abs 절대값
- - select abs(1), abs(-1);
+```
+select abs(1), abs(-1);
+```
 
  2. ceil 천장 수
- -select ceil(3.15), ceiling(3.15);
+```
+select ceil(3.15), ceiling(3.15);
+```
 
  3. mod 나머지
- - select mod(10, 3);
+```
+select mod(10, 3);
+```
 
  4. floor 바닥 수
- - select floor(3.12);
+```
+select floor(3.12);
+```
  
  5. round(x): x에 근접한 정수
- - round(x, d): x값 중에 소수점 d자리에 가장 근전합 실수
- - select round(1.498);
- - select round(1.498, 1);
- - select round(1.498, 0);
+    - round(x, d): x값 중에 소수점 d자리에 가장 근전합 실수
+ ```
+ select round(1.498);
+ select round(1.498, 1);
+ select round(1.498, 0);
+ ```
 
  6. power(x, y), pow(x, y): x의 y 제곱 수
- - select pow(2, 3), powwr(2, 3);
+```
+select pow(2, 3), powwr(2, 3);
+```
 
  7. sign(x) 양수는 1, 음수는 -1, 0은 0 출력
- - select sign(-1), sign(1), sign(0);
+```
+select sign(-1), sign(1), sign(0);
+```
 
  8. greatest(x, y, ...), (x, y, ...) 최대 최소
- - select greatest(10, 40, 20, 50), least(10, 40, 20, 50);
- - select greatest("a", "A", "b", "c", "B", "C"), least("hello", "hela", "hell"); "c"와 "hela" 가 출력
- 
+```
+select greatest(10, 40, 20, 50), least(10, 40, 20, 50);
+select greatest("a", "A", "b", "c", "B", "C"), least("hello", "hela", "hell"); "c"와 "hela" 가 출력
+```
+
  9. min(colunm), max(colunm) 칼럼에서 최대 최소를 뽑아냄
  
  # 문자 함수
