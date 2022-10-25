@@ -1,4 +1,4 @@
-# 외부데이터 DB 사용법
+# DB사용자 생성
 
 ## A. workbench 작업
  - Workbench에서 데이터베이스 생성
