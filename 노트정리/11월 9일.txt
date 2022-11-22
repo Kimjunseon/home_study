@@ -1,0 +1,12 @@
+/gb?a=deleteform&no=7
+
+
+11월 9일 과제 회원정보 수정
+casting
+
+11월 10일
+
+1. Page Scope
+2. Request Scope
+3. Session Scope
+4. Application Scope
