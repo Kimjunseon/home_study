@@ -1,0 +1,36 @@
+개념
+cdn service
+spring boot
+spring msa(cloud)
+
+(Backend 기술)
+java  <-->  Node.js
+
+[mysite04 배포하기]
+pom.xml에 서블릿과 톰캣 추가하기
+-f mysite04 clean package tomcat7:redeploy -Pprodution
+
+[spring-practices 배포하기]
+pom.xml에 서블릿과 톰캣 추가하기
+clean package tomcat7:redeploy -Pprodution
+clean package tomcat7:redeploy -Pprodution -Dmaven.test.skip=true (밑에꺼는 테스트를 스킵함)
+
+[Linux 네트워크]
+netstat -anp
+인터넷 커넥션 확인
+
+
+[mysite05 배포하기]
+1. mysite05 maven 삭제하기
+2. 디렉토리에서 mysite05 -> mysite06 수정하기
+3. mysite06 내 setting, target, class, project 삭제
+4. pom내용을 mysite05 -> mysite06 수정하기
+5. main-resource-application.yml 에서
+# datasource
+아이피주소 바꾸기
+# server
+mysite05 -> mysite06
+....
+
+[mysite06 배포하기]
+

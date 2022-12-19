@@ -1,0 +1,26 @@
+[CSS]
+cascading: 계단형의미, 연속작용, 현재 상태가 전 상태에 영향을 미침
+우선순위가 존재 함
+
+DOM: Document Object Model
+
+margin: 엘리멘트간 간격
+
+[기본]
+태그(1), 아이디(10000), 클래스(100)
+
+[복합]
+태그 아이디 클래스를 복합하여 사용
+
+#my-header { color: #f00 }
+body div .headline { color: #000 }
+<body>
+	<div>
+		<h2 id="my-header" class="headline">...</h2>
+	</div>
+</body>
+
+----> #my-header 컬러 출력
+
+[박스모델]
+margine, padding 을 주로씀

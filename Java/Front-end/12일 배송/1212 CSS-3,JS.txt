@@ -1,0 +1,29 @@
+[CSS]
+
+(1. 글꼴)
+font-family: '맑은고딕', 돋움, 굴림
+font-type: 사이즈 값
+	em: 글꼴 사이즈의 한 종류 (사이트에서 글꼴 변화를 줘도 바끼지 않음)
+	line-height 문장과 문장사이의 간격(%, em 추천)
+	1em = 16px
+	vertical 특정 글씨 크기를 줄임(super, baseline, top, middle... 등등 존재)
+	letter-spacing은 한 칼럼에서 한 라인은 짧고 다른 라인은 길어서 다음라인으로 넘어갈 때 사용해서 라인을 줄임
+
+(2. Layout)
+레이아웃 참조 사이트
+	CSS-bootstrap
+	bootstrap thema
+	layout gala:
+
+(3. Table)
+	ch05/practice01.html 작성
+	placeholoder="아이디" -> lezend의 id 역할
+
+bootstrap 확인
+======================================================
+first PL: java, c#, c++, c
+second PL: JavaScript, Python
+======================================================
+[JavaScript]
+node.js 설치 vscode로 js 파일 생성 위치는 프론트엔드
+console.log('---');
