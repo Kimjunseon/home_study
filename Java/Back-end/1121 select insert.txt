@@ -1,0 +1,34 @@
+[mysql]
+insert
+  into guestbook
+values ()
+
+
+select last_insert_id(); <- 같은 세션에서 작성해야 함 마지막으로 작성된 no 값을 가져옴
+
+mybatis에서 사용 시
+값을 세팅만 함 변경(xml 내에서)은 불가
+
+<selectkey keyProperty="no" resultType="long" order="AFTER">
+	<![CDATA[
+	select last_insert_id()
+	]]>
+</selectkey>
+
+===============================================================
+[Spring]
+Logging - 개발 중 디버깅 및 개발 후 문제점을 추적 및 분석하는 법
+사용
+1.  java.util.logging				X
+2. Apache 의 (J)arkarta (C)ommons (L)ogging	O 사용은 하지만 불편함
+3. Log4J					X App 개발 시 사용함
+4. SLF4J
+
+Logging 인터페이스가 많아 SLF4J 통일
+
+SLF4J	(인터페이스)
+Logback	(구현체)
+
+[interceptor]
+보안(Security) = 인증(Authentification) +권한(Authorization)
+보안 = 인프라(네트워크, 서버, 소프트웨어[인증 + 권한])
