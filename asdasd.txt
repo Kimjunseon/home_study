@@ -1,3 +1,0 @@
-com.bitacademy.guestbook.dao
-com.bitacademy.guestbook.dao.test
-com.bitacademy.guestbook.vo
