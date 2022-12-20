@@ -53,6 +53,7 @@
 
 * 해당폴더에 주피터 생성 후 실행
 
+      conda activate ml-env
       jupyter notebook
 
 * 쥬피터 노트북 폰트 설정
