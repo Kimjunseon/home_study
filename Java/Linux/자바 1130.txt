@@ -1,0 +1,16 @@
+[리눅스]
+
+1) 리눅스? OS?
+
+-OS-
+Unix 등장
+1. BSD Unix : 학교에서 사용
+2. System V : 산업체에서 사용
+
+company
+| System V --------	|
+| sun sunOS solaris	|
+| hp  hpOS  hp-ux	|
+| IBM IBMOS AIX	|
+|-------------------	|
+

@@ -1,0 +1,78 @@
+[ssh]
+ls -l: 권한 확인
+ls -la: 권한 숨은파일까지 확인
+chmod: 파일명 바꿀 숫자 - 권한바꾸기
+r: 4
+w: 2
+x: 1
+
+파일: 실행 파일, 일반파일
+
+rwx:	7
+r-x:	5
+---:	0
+
+rw-:	6
+r--:	4
+---:	0
+
+600
+rw- --- ---
+
+010
+--- -x- ---
+
+mv ./파일명 ./파일명: 이동 명령 이름을 바꾸는것도 가능함
+
+useradd -g 그룹명: 유저추가 
+
+
+passwd 유저명: 해당유저 비번 설정
+userdel 유저명: 해당유저 유저삭제
+
+rm -rf 파일명/: 파일 삭제
+
+su - root (or) su - : root 환경으로 적응
+
+pstree: 자신의 위치 찾기? 먼가 루트 찾기
+
+tar 하나의 파일을 아카이핑
+gz 하나의 파일을 압축
+
+gzip -d (gz): 알집 풀기
+tar xvf (tar): 아카이핑 하기
+tar -xvzf (gz): 알집 푼 후 tar 아카이핑
+
+java -cp . (파일명 .java는 뺴고): 현재 위치를 추가하면서 자바 클래스를 실행
+=============================================================
+[C languge]
+hello.c -> hello.o -> hello
+c파일을 오브젝트화 시키고 실행
+
+1번과정
+gcc -c (~~~.c): 오브젝트화 시키기
+
+2번과정
+gcc -o (원하는 파일명) (~~~.o): 오브젝트를 실행파일로 변환
+
+3번과정
+./(원하는 파일명): 파일실행
+=============================================================
+[Tomcat  실행]
+/usr/local/bitacademy/tomcat9/bin/catalina.sh start
+
+[Tomcat  끄기]
+/usr/local/bitacademy/tomcat9/bin/catalina.sh stop
+
+[프로그랭 동작확인]
+ps -ef | grep ()
+ps -ef | grep tomcat: 톰캣동작확인
+=============================================================
+[vi 명령어]
+dd: 라인지우기
+uu: 복구
+=============================================================
+자바 설치 톰캣 설치
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.69/bin/apache-tomcat-9.0.69.tar.gz
+helloworld 작성
+tomcat 작동확인(사이트)
