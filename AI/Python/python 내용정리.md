@@ -86,7 +86,23 @@ print(result2)
 
 if i !=j 조건을 추가하면 중복이 제거 됨
 ```
+# Numpy
+## Numpy는...
+- 과학 계산을 위한 라이브러리
+- 행렬/배열 처리 및 연산
+- 난수생성
+     
+- numpy를 import 하는 법
+```
+import numpy as np
+```
+- 데이터 타입 알아보기
+```
+a1 = np.array([0, 1, 2, 3, 4, 5])
 
+type(a1)	a1의 타입
+a1.dtype	a1의 데이터 타입
+```
 
 
 
