@@ -38,3 +38,32 @@ print()
 result2 = [i for i in range(10) if i % 2 == 0]
 print(result2)
 ```
+
+## else문을 사용한 List Comprehension
+
+
+- for
+```
+result = []
+
+for i in range(10):
+    if i % 2 == 0:
+        result.append(i)
+    else:
+        result.append(99)
+        
+print(result)
+print()
+```
+
+- List Comprehension
+```
+result2 = [i if i % 2 == 0 else 99 for i in range(10)]
+print(result2)
+```
+else를 사용할 땐 if문을 앞으로 for문을 뒤로 보낸다
+```
+i if (조건) else (조건) for (조건)
+```
+
+
