@@ -19,5 +19,22 @@ result2 = [i for i in range(10)]
 print(result2)
 ```
 
-## List Comprehension문을 사용한 반복
-if도 사용이 가능하다.
+## if문을 사용한 짝수처리
+
+- for
+```
+result = []
+
+for i in range(10):
+    if i % 2 == 0:
+        result.append(i)
+
+print(result)
+print()
+```
+- List Comprehensio
+
+```
+result2 = [i for i in range(10) if i % 2 == 0]
+print(result2)
+```
