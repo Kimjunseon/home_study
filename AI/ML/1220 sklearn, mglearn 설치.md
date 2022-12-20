@@ -20,7 +20,7 @@ traitlets        : 5.7.1
 
 # mglearn 설치
 
-    pip install mglearn
+    pip install mglearn (base) 에서만 설치됨?
 
 # graphviz 설치
 
