@@ -91,7 +91,9 @@ if i !=j 조건을 추가하면 중복이 제거 됨
 - 과학 계산을 위한 라이브러리
 - 행렬/배열 처리 및 연산
 - 난수생성
-</br>
+
+<br/>
+
 - numpy를 import 하는 법
 ```
 import numpy as np
