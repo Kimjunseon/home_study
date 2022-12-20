@@ -66,4 +66,27 @@ else를 사용할 땐 if문을 앞으로 for문을 뒤로 보낸다
 i if (조건) else (조건) for (조건)
 ```
 
+## 이중 for문에서 List Comprehension 사용
+
+- for
+```
+result = []
+case1 =  ['A', 'B', 'C']
+case2 =  ['A', 'B', 'C']
+
+for i in case1:
+    for j in case2:
+        result.append(i + j)
+print(result)
+```
+- List Comprehension
+```
+result2  = [i + j for i in case1 for j in case2]
+print(result2)
+
+if i !=j 조건을 추가하면 중복이 제거 됨
+```
+
+
+
 
