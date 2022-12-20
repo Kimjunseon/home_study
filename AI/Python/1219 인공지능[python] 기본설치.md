@@ -1,8 +1,3 @@
-1. Mini conda 설치
-2. 슬랙 즐찾
-3. Window Powershell 설치
-4. notepad 설치
-
 # Mini conda 설정
 1. Path: 사용자이름  - script 
 2. 경로 저장
@@ -58,6 +53,7 @@
 
 * 해당폴더에 주피터 생성 후 실행
 
+      conda activate ml-env
       jupyter notebook
 
 * 쥬피터 노트북 폰트 설정
