@@ -18,3 +18,6 @@ print()
 result2 = [i for i in range(10)]
 print(result2)
 ```
+
+## List Comprehension문을 사용한 반복
+if도 사용이 가능하다.
