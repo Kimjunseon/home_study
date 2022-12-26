@@ -1,0 +1,28 @@
+[tensorflow, seaborn] 설치
+conda activate ml-env
+conda install tensorflow
+conda install seaborn
+
+[the book 책]
+https://thebook.io/080324/
+
+[custom.css 설정]
+div.CodeMirror, dic.output_area pre, div.ouput_wrapper pre{
+
+    font-family: Consolas;
+
+    font-size: 16pt;
+
+    line-height: 110%
+
+}
+
+div#notebook, div.prompt{
+
+    font-family: Consolas;
+
+    font-size: 16pt;
+
+    line-height: 110%;
+
+}
