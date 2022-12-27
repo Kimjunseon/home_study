@@ -1,0 +1,8 @@
+ [tensorboard 확인하기]
+ conda activate ml-env 활성 후
+ logs 상위 폴더에서..
+ tensorboard --logdir=.\logs
+
+[커널 die]
+import os
+os.environ["KMP_DUPLICATE_LIB_OK"]='1'
