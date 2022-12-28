@@ -1,0 +1,26 @@
+[NLTK 설치]
+conda activate ml-env 환경에서..
+conda install -c anaconda nltk
+conda install -c conda-forge spacy-model-en_core_web_sm
+
+시스템 변수에
+JAVA_HOME 새로 만들기
+경로는
+C:\Program Files\Java\jdk-12.0.2
+
+Path에 들어가서..
+%JAVA_HOME%\bin 추가하기
+
+파이썬과 자바를 연결하는 모듈
+conda install -c conda-forge jpype1
+
+[konlpy] 설치
+pip install konlpy
+
+[wordcloud] 설치
+conda install -c conda-forge wordcloud
+
+[영화 리뷰 데이터]
+https://github.com/e9t/nsmc
+ratings_train.txt 다운
+ratings_test.txt 다운
