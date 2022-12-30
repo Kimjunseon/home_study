@@ -1,0 +1,34 @@
+- Crawling
+무조건적으로 데이터를 가져옴
+
+- Scraping
+조건적으로 데이터를 가져옴
+
+[anaconda request 설치]
+conda activate ml-env 환경에서...
+conda install -c anaconda requests
+
+[bs4 설치]
+conda install bs4
+
+[lxml 설치]
+conda install lxml
+
+[selenium 설치]
+conda install -c conda-forge selenium
+
+[chromedriver 설치]
+https://chromedriver.chromium.org/downloads
+크롬 버전에 맞는 드라이버를 설치한다.
+
+[tqdm 설치] 
+conda install tqdm
+
+[folium 설치]
+conda install -c conda-forge folium 
+
+[googlemaps 설치]
+conda install -c conda-forge googlemaps
+
+[구글 지도 필요 시..]
+구글 지오 코딩 api 키 발급 찾아보기
