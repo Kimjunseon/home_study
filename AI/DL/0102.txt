@@ -1,0 +1,156 @@
+[0102]
+jango 서버 구축하기
+client <-> spring <-> Django
+
+1. (연습) 새로운 가상환경 만들기
+conda create -n ~~~ python=3.8
+
+2. web 가상환경 켜기
+conda activate ~~~
+
+3. Django 설치
+https://www.djangoproject.com/download/
+버전 3.2. 버전 사용(Long Term Service)
+설치는 터미널 가상환경에서
+conda install -c anaconda django
+
+4. pycham or vscode 골라 사용하기
+
+5. 프로젝트 생성
+5.1) Previouly configuerd interpreter
+5.2) Add interpreter
+5.3) conda Environment
+5.4) interpreter - ~~~ 가상환경으로 설정
+5.5) Make available to all projects 체크 후 ok
+
+6. 파이참 터미널에서
+conda activate web-env 
+
+7. (터미널)Django용 프로젝트 생성
+django-admin startproject board .
+.은 현재위치에서
+
+8. (터미널)application 생성
+python manage.py startapp bulletin_board
+
+9. (mysql workbench)DB생성
+[첫 번째] 로컬이 없다면 로컬 DB생성
+create database django_db default character set utf8mb4;
+
+create user 'django'@'%' identified by '1234'; 어떤 호스트든 접근 가능
+create user 'django'@'localhost' identified by '1234'; 내 아이피만 접근 가능
+
+권한주기
+grant all privileges on django_db.* to 'django'@'%';
+grant all privileges on django_db.* to 'django'@'localhost';
+
+MySQL의 캐시를 지우고 새로운 설정을 적용
+flush privileges;
+
+[두 번째] django 이름의 DB생성
+
+10. 어플 데이터 간 연동 persistence api
+JPA - Hivernate
+
+10.1) sql mapping
+mybatis
+
+10.2) ORM(Object Relational Mapping) Django 디폴트
+해당 칼럼에 관련된 데이터를 객체에 담아 사용
+
+** ORM을 쓸 때 스키마를 변경되는 모든 정보는 장고ORM을 사용해야함 (Mysql에서 변경 금지!)
+
+11. (pycham) 초기설정
+board 폴더 settings.py 에서..
+
+# 오류 메세지에 대한 출력, 배포 시 false로 설정
+DEBUG = True
+
+# DEBUG = false 이고 모든 아이피에서 접근 하려면 ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
+
+# Application definition
+INSTALLED_APPS = [
+    '...',
+    '...',
+    '...',
+    '...',
+    '...',
+    '...',
+	(추가)
+    'bulletin_board.apps.BulletinBoardConfig'
+]
+
+# Database
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_db',
+        'USER': 'django',
+        'PASSWORD': '1234',
+        'PORT': '3306'
+    }
+}
+바로 밑에
+ 
+import pymysql  (이거 하기 전 11번 먼저 수행)
+
+pymysql.version_info={1, 4, 2, 'final', 0}
+pymysql.install_as_MySQLdb()
+
+# Internationalization
+# https://docs.djangoproject.com/en/3.2/topics/i18n/
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'Asia/Seoul' (수정)
+
+USE_I18N = True
+
+USE_L10N = True
+
+# DB time Zone 설정
+USE_TZ = False (수정)
+
+11. (pycham 터미널)pymysql DB파이썬 연결
+conda install -c anaconda pymysql
+
+12. 스크립트를 데이터베이스에 보내기
+ python manage.py migrate
+
+13. mysql 에러로 해당 페이지에서 해당 버전 다운
+Windows (x86, 64-bit), ZIP Archive
+Debug Binaries & Test Suite
+https://dev.mysql.com/downloads/mysql/
+
+업데이트 후 add 에서
+server shell router add하기
+포트와 x포트는
+3307 33070 사용하기
+
+14. (mysql)MySQL local DB 생성
+포트 3307 설정
+
+(mysql)MySQL django DB 생성
+
+# Database
+포트 3307로 수정
+
+base.py 수정
+
+15. 장고 테스트 하기
+python manage.py runserver
+
+슈퍼유저 아이디 생성
+python manage.py createsuperuser
+
+model 만들기
+admin 만들기
+
+스크립트 만들기
+python manage.py makemigrations
+
+다시 마이그레이트 해주기
+python manage.py migrate   
+
+form 작성 시 시리얼 키를 사용 해야함 (보안상의 문제로 사용됨)
