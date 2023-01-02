@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'django_db',
         'USER': 'django',
         'PASSWORD': '1234',
-        'PORT': '3306'
+        'PORT': '3307'
     }
 }
 바로 밑에
@@ -133,24 +133,19 @@ server shell router add하기
 
 (mysql)MySQL django DB 생성
 
-# Database
-포트 3307로 수정
-
-base.py 수정
-
 15. 장고 테스트 하기
 python manage.py runserver
 
-슈퍼유저 아이디 생성
+16. 슈퍼유저 아이디 생성
 python manage.py createsuperuser
 
 model 만들기
 admin 만들기
 
-스크립트 만들기
+17. migrations 만들기 (DB에 접속하지 않고 DB를 관리함)
 python manage.py makemigrations
 
-다시 마이그레이트 해주기
+18. migrate 업데이트(다시 적용)
 python manage.py migrate   
 
 form 작성 시 시리얼 키를 사용 해야함 (보안상의 문제로 사용됨)
