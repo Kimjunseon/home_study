@@ -10,3 +10,6 @@ git rm -r --cached .
 git add .
 git commit -m '~~~'
 ```
+
+
+https://drive.google.com/drive/folders/1U4npH9XI77acJfUiG4SBgffKyT6yNvdW
